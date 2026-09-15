@@ -1,0 +1,1 @@
+import{g as t}from"./index-CUo3-bUD.js";function n(){return t("/game/banners")}function r(e){return t("/game/list",e)}function g(e){return t(`/game/${e}`)}function s(){return t("/game/hot")}function i(e){return t(`/pay/packages/${e}`)}export{r as a,s as b,g as c,i as d,n as g};
