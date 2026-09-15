@@ -256,6 +256,7 @@ function draw() {
   ctx.fill()
 
   snake.forEach((seg, i) => {
+    if (!ctx) return
     const isHead = i === 0
     if (isHead) {
       ctx.fillStyle = '#818cf8'

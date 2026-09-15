@@ -1,1 +1,0 @@
-import{g as t,p as e}from"./index-CUo3-bUD.js";function o(r){return e("/order/create",r)}function s(r,n){return e(`/order/${r}/pay`,{channel:n})}function c(r){return t(`/order/${r}/status`)}function u(r){return t("/order/list",r)}function d(r){return e(`/order/${r}/cancel`)}export{u as a,d as b,o as c,c as g,s as p};
