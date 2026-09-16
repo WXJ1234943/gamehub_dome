@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.github
+*.md
+.env.local
+.env.*.local
+gamehub_dome
+.vscode
