@@ -11,7 +11,7 @@ let pendingQueue: Array<(token: string) => void> = []
 
 function createRequest(): AxiosInstance {
   const instance = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE || '/api',
+    baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
     timeout: REQUEST_TIMEOUT,
     headers: { 'Content-Type': 'application/json' },
   })
@@ -103,7 +103,7 @@ function handleTokenExpired(instance: AxiosInstance, config: any): Promise<any> 
 async function refreshToken(instance: AxiosInstance): Promise<string> {
   const refreshToken = getRefreshToken()
   if (!refreshToken) throw new Error('No refresh token')
-  const res = await axios.post('/api/auth/refresh', { refreshToken })
+  const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/refresh`, { refreshToken })
   const { token, expiresIn } = res.data.data
   setToken(token, refreshToken, expiresIn)
   return token
