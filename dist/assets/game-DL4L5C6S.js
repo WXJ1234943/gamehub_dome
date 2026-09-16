@@ -1,1 +1,0 @@
-import{g as t}from"./index-DLBvDLQk.js";function n(){return t("/game/banners")}function g(e){return t("/game/list",e)}function r(e){return t(`/game/${e}`)}function s(){return t("/game/hot")}function o(e){return console.log("gameId",e),t(`/game/packages/${e}`)}export{g as a,s as b,r as c,o as d,n as g};
