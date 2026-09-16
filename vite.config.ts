@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const apiBase = (env.VITE_API_BASE_URL || 'http://localhost:3000').replace(/\/api$/, '')
 
   return {
-    base: '/gamehub_dome/',
+    base: env.VITE_BASE_PATH || '/',
     plugins: [vue(), UnoCSS()],
     resolve: {
       alias: {
